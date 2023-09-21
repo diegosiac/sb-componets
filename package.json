@@ -17,6 +17,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "chromatic": "^7.2.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
@@ -33,8 +34,11 @@
     "dev": "npm run storybook",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "chromatic": "npx chromatic --project-token=chpt_2d31e591e93021c"
   },
   "type": "module",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "readme": "ERROR: No README data found!",
+  "_id": "my-storybook@0.0.0"
 }
