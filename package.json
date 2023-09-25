@@ -13,6 +13,7 @@
     "@storybook/react": "7.4.3",
     "@storybook/react-vite": "7.4.3",
     "@storybook/testing-library": "0.2.1",
+    "@types/node": "^20.6.5",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.0.0",
@@ -37,7 +38,7 @@
   "homepage": "https://diegosiac.com",
   "license": "MIT",
   "main": "dist/index.js",
-  "name": "dgs-my-storybook-components",
+  "name": "dgs-my-storybook-components-siac",
   "peerDependencies": {
     "react": ">= 16",
     "typescript": ">= 4.0.0"
