@@ -68,5 +68,7 @@ export const Page: React.FC = () => {
         </div>
       </section>
     </article>
-  );
-};
+  )
+}
+
+export default Page
