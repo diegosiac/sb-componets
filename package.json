@@ -40,8 +40,7 @@
   "main": "dist/index.js",
   "name": "dgs-my-storybook-components-siac",
   "peerDependencies": {
-    "react": ">= 16",
-    "typescript": ">= 4.0.0"
+    "react": ">= 16"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
