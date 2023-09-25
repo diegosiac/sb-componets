@@ -1,6 +1,7 @@
 {
+  "_id": "my-storybook@0.0.0",
   "dependencies": {
-    "react": "^18.2.0",
+    "react": ">= 16",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
@@ -18,27 +19,58 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "chromatic": "^7.2.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
+    "rimraf": "^5.0.1",
+    "semantic-release": "^22.0.5",
     "storybook": "^7.4.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "name": "my-storybook",
-  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://diegosiac.com",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "dgs-my-storybook-components",
+  "peerDependencies": {
+    "react": ">= 16",
+    "typescript": ">= 4.0.0"
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "private": false,
+  "readme": "ERROR: No README data found!",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegosiac/sb-componets"
+  },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run clean && tsc && npm run copy-files",
     "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_2d31e591e93021c",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "dev": "npm run storybook",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "chromatic": "npx chromatic --project-token=chpt_2d31e591e93021c"
+    "storybook": "storybook dev -p 6006"
   },
   "type": "module",
-  "version": "0.0.0",
-  "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.0.0"
+  "typings": "dist/index.d.ts",
+  "version": "0.0.0"
 }
